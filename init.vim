@@ -22,8 +22,8 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 Plug 'Yggdroot/indentLine'
 Plug 'scrooloose/nerdcommenter' " in <space>cn to comment a line
 Plug 'majutsushi/tagbar'
-Plug 'luochen1990/rainbow'   "å½©è‰²æ‹¬å·
-"Plug 'tmhedberg/SimpylFold', { 'for' :['python', 'go'] }   "æŠ˜å 
+Plug 'luochen1990/rainbow'   "²ÊÉ«À¨ºÅ
+"Plug 'tmhedberg/SimpylFold', { 'for' :['python', 'go'] }   "ÕÛµş
 Plug 'fatih/vim-go' , { 'for': 'go', 'tag': '*' }
 "Plug 'rust-lang/rust.vim', { 'for' :'rust' }
 Plug 'Vimjas/vim-python-pep8-indent', { 'for' :['python', 'vim-plug'] }
@@ -321,9 +321,9 @@ color molokai
 set guifont=Jetbrains\ Mono:h14:cANSI
 hi NonText ctermfg=gray guifg=grey10
 
-" æ€»æ˜¯æ˜¾ç¤ºçŠ¶æ€æ  
+" ×ÜÊÇÏÔÊ¾×´Ì¬À¸ 
 let laststatus = 2
-let g:airline_powerline_fonts = 1   " ä½¿ç”¨powerlineæ‰“è¿‡è¡¥ä¸çš„å­—ä½“
+let g:airline_powerline_fonts = 1   " Ê¹ÓÃpowerline´ò¹ı²¹¶¡µÄ×ÖÌå
 
 "vim-easy-align
 "xmap ga <Plug>(EasyAlign)
@@ -365,18 +365,18 @@ let g:mkdp_preview_options = {
 let g:mkdp_markdown_css = ''
 let g:mkdp_highlight_css = ''
 let g:mkdp_port = ''
-let g:mkdp_page_title = 'ã€Œ${name}ã€'
+let g:mkdp_page_title = '¡¸${name}¡¹'
 
 " =============================================================================
 " tagbar
 " =============================================================================
 "tagbar
-"F9è§¦å‘ï¼Œè®¾ç½®å®½åº¦ä¸º30
+"F9´¥·¢£¬ÉèÖÃ¿í¶ÈÎª30
 let g:tagbar_width = 30
 nmap <F9> :TagbarToggle<CR>
-"å¼€å¯è‡ªåŠ¨é¢„è§ˆ(éšç€å…‰æ ‡åœ¨æ ‡ç­¾ä¸Šçš„ç§»åŠ¨ï¼Œé¡¶éƒ¨ä¼šå‡ºç°ä¸€ä¸ªå®æ—¶çš„é¢„è§ˆçª—å£)
+"¿ªÆô×Ô¶¯Ô¤ÀÀ(Ëæ×Å¹â±êÔÚ±êÇ©ÉÏµÄÒÆ¶¯£¬¶¥²¿»á³öÏÖÒ»¸öÊµÊ±µÄÔ¤ÀÀ´°¿Ú)
 let g:tagbar_autopreview = 1
-"å…³é—­æ’åº,å³æŒ‰æ ‡ç­¾æœ¬èº«åœ¨æ–‡ä»¶ä¸­çš„ä½ç½®æ’åº
+"¹Ø±ÕÅÅĞò,¼´°´±êÇ©±¾ÉíÔÚÎÄ¼şÖĞµÄÎ»ÖÃÅÅĞò
 let g:tagbar_sort = 0
 
 command! -bang -nargs=* MRU call fzf#vim#history(fzf#vim#with_preview())
@@ -465,13 +465,13 @@ let g:go_highlight_variable_declarations = 0
 " FZF
 " =============================================================================
 nnoremap <silent> <Leader>f :Files<CR>
-"<Leader>båˆ‡æ¢Bufferä¸­çš„æ–‡ä»¶
+"<Leader>bÇĞ»»BufferÖĞµÄÎÄ¼ş
 nnoremap <silent> <Leader>b :Buffers<CR>
-"<Leader>påœ¨å½“å‰æ‰€æœ‰åŠ è½½çš„Bufferä¸­æœç´¢åŒ…å«ç›®æ ‡è¯çš„æ‰€æœ‰è¡Œï¼Œ:BLinesåªåœ¨å½“å‰Bufferä¸­æœç´¢
+"<Leader>pÔÚµ±Ç°ËùÓĞ¼ÓÔØµÄBufferÖĞËÑË÷°üº¬Ä¿±ê´ÊµÄËùÓĞĞĞ£¬:BLinesÖ»ÔÚµ±Ç°BufferÖĞËÑË÷
 nnoremap <silent> <Leader>p :Lines<CR>
-"<Leader>håœ¨Vimæ‰“å¼€çš„å†å²æ–‡ä»¶ä¸­æœç´¢ï¼Œç›¸å½“äºæ˜¯åœ¨MRUä¸­æœç´¢ï¼Œ:Historyï¼šå‘½ä»¤å†å²æŸ¥æ‰¾
+"<Leader>hÔÚVim´ò¿ªµÄÀúÊ·ÎÄ¼şÖĞËÑË÷£¬Ïàµ±ÓÚÊÇÔÚMRUÖĞËÑË÷£¬:History£ºÃüÁîÀúÊ·²éÕÒ
 nnoremap <silent> <Leader>h :History<CR>
-"è°ƒç”¨Rgè¿›è¡Œæœç´¢ï¼ŒåŒ…å«éšè—æ–‡ä»¶
+"µ÷ÓÃRg½øĞĞËÑË÷£¬°üº¬Òş²ØÎÄ¼ş
 "command! -bang -nargs=* Rg
   \ call fzf#vim#grep(
   \   'rg --column --line-number --no-heading --color=always --smart-case --hidden '.shellescape(<q-args>), 1,
@@ -613,4 +613,5 @@ nnoremap <silent> <leader>r  :<C-u>CocListResume<CR>
 
 
 " ===================== End of Plugin Settings =====================
+
 
